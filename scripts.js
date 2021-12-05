@@ -29,6 +29,9 @@ dado.onchange = function () {
                 case num <= 10000:
                     para.textContent = 'SPARE SOME LAMBO FOR US!';
                     break;
+                case num >10000:
+                    para.textContent = 'Welcome back, Chia.Network owner!';
+                    break;
 
                 default:
                     para.textContent = 'Bro WTF you typed?';
