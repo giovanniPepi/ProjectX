@@ -28,13 +28,6 @@ input {
     align-items: center;
     justify-content: center;
 }
-
-button {
-    font-family: Roboto,sans-serif;
-    border: none;
-    border-radius: 8px;    
-  }
-
 ul {
     list-style-type: none;
     display: flex;
