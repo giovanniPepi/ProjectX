@@ -1,10 +1,6 @@
 const dado = document.getElementById('textRico');
 const para = document.getElementById('calcRico');
 
-function preço (num) {
-    return num * num;
-}
-
 dado.onchange = function () {
     const num = parseFloat(dado.value);
 
@@ -21,7 +17,7 @@ dado.onchange = function () {
                     para.textContent = 'Sorry man no lambo for u :(';
                     break;
                 case num <= 100:
-                    para.textContent = 'AUDI is a cheaper versions of Lambo...';
+                    para.textContent = 'AUDI is a cheaper version of Lambo...';
                     break;
                 case num <= 1000:
                     para.textContent = 'GOING FOR THAT LAMBO!';
