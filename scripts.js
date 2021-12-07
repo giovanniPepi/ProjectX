@@ -1,35 +1,55 @@
-const dado = document.getElementById('textRico');
-const para = document.getElementById('calcRico');
+const xchNumber = document.getElementById('textRico');
+const para1 = document.getElementById('calcRico');
+const para2 = document.getElementById('xchN')
+const para3 = document.getElementById('xchDollarCalc');
+const xchUSD = document.getElementById('xchUSD');
 
-dado.onchange = function () {
-    const num = parseFloat(dado.value);
-
+xchNumber.onchange = function () {
+    const num = parseFloat(xchNumber.value);
     if (isNaN(num)) {
-        para.textContent = 'Please type a number!';
+        para1.textContent = 'Please type a number!';
     } else switch (true) {
                 case num < 0:
-                    para.textContent = 'So you have debts in XCH? Woah';
+                    para1.textContent = `${num} XCH? So you have debts in XCH? Woah`;
                     break;
                 case num === 0:
-                    para.textContent = 'Go on get some XCH!';
+                    para1.textContent = `${num} XCH `+ 'go on get some XCH!';
                     break;
                 case num <= 5:
-                    para.textContent = 'Sorry man no lambo for u :(';
+                    para1.textContent = `${num} XCH - ` + 'Sorry man no lambo for u :(';
                     break;
                 case num <= 100:
-                    para.textContent = 'AUDI is a cheaper version of Lambo...';
+                    para1.textContent = `${num} XCH - ` + 'AUDI is a cheaper version of Lambo...';
                     break;
                 case num <= 1000:
-                    para.textContent = 'GOING FOR THAT LAMBO!';
+                    para1.textContent = `${num} XCH - ` +  'GOING FOR THAT LAMBO!';
                     break;
                 case num <= 10000:
-                    para.textContent = 'SPARE SOME LAMBO FOR US!';
+                    para1.textContent = `${num} XCH - ` +  'SPARE SOME LAMBO FOR US!';
                     break;
                 case num >10000:
-                    para.textContent = 'Welcome back, Chia.Network owner!';
+                    para1.textContent = `${num} XCH - ` +  'Welcome back, Chia.Network owner!';
                     break;
 
                 default:
-                    para.textContent = 'Bro WTF you typed?';
+                    para1.textContent = 'Bro WTF you typed?';
             }
+        xchDollarify(num);
     }
+
+    function xchDollarify(num) {
+        const numXCH = num;
+        para2.textContent = `${numXCH} XCH: `
+
+        xchUSD.onchange = function () {
+            const numUSD = parseFloat(xchUSD.value);
+            if (isNaN(numUSD)) {
+                para3.textContent = 'Please type a number!';
+            } else {
+                quote = document.getElementById('xchN')
+                console.log(quote);
+                result = numUSD * quote;
+                para3.textContent = `${numUSD} XCH - ${result}  `
+            }        
+    }
+}
