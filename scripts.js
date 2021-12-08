@@ -36,20 +36,3 @@ xchNumber.onchange = function () {
             }
         xchDollarify(num);
     }
-
-    function xchDollarify(num) {
-        const numXCH = num;
-        para2.textContent = `${numXCH} XCH: `
-
-        xchUSD.onchange = function () {
-            const numUSD = parseFloat(xchUSD.value);
-            if (isNaN(numUSD)) {
-                para3.textContent = 'Please type a number!';
-            } else {
-                quote = document.getElementById('xchN')
-                console.log(quote);
-                result = numUSD * quote;
-                para3.textContent = `${numUSD} XCH - ${result}  `
-            }        
-    }
-}
