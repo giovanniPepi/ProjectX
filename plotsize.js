@@ -1,7 +1,7 @@
 const TeraByte = (1000 ** 4);
 const TebiByte = (1024 ** 4);
 const plotSizeTiB = (101.4 / 1024);
-const plotSizeTB = (101.4 / 1000);
+const plotSizeTB = (108.9 / 1000);
 // source: https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes //
 
 const plotNumber = document.getElementById('plotNumber');
